@@ -6,6 +6,6 @@ target 'YZUtils' do
   # use_frameworks!
 
   # Pods for YZUtils
-#   pod 'SAMKeychain'
-    pod 'YYKit'
+  #    pod 'YYKit'
+    pod 'YZUtils'
 end

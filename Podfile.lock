@@ -2,17 +2,21 @@ PODS:
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
+  - YZUtils (0.0.1):
+    - YYKit
 
 DEPENDENCIES:
-  - YYKit
+  - YZUtils
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - YYKit
+    - YZUtils
 
 SPEC CHECKSUMS:
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  YZUtils: 9645eec6682b5e205f1fee1abae501b351bcb862
 
-PODFILE CHECKSUM: 99329bfff2c8a6db0d5aa51fe8091f629183723d
+PODFILE CHECKSUM: 70a295ec45c2b82f2b7318f35ef7b0a4324f41f1
 
 COCOAPODS: 1.5.3

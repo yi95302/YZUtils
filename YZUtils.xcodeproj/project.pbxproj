@@ -92,8 +92,6 @@
 		FFBBBED121E6EBAB002F955F /* YZUtils */ = {
 			isa = PBXGroup;
 			children = (
-				FFBBBEEA21E6EC72002F955F /* YZUtils.h */,
-				FFBBBEF821E6F5C5002F955F /* Category */,
 				FFBBBEE821E6EC61002F955F /* Utils */,
 				FFBBBED221E6EBAB002F955F /* AppDelegate.h */,
 				FFBBBED321E6EBAB002F955F /* AppDelegate.m */,
@@ -111,6 +109,8 @@
 		FFBBBEE821E6EC61002F955F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FFBBBEEA21E6EC72002F955F /* YZUtils.h */,
+				FFBBBEF821E6F5C5002F955F /* Category */,
 				FFBBBEEB21E6EC72002F955F /* YZUtilsConstant.h */,
 				FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */,
 				FFBBBEF521E6F418002F955F /* YZDevice.h */,
