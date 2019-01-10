@@ -14,9 +14,9 @@
 		FFBBBEDC21E6EBAB002F955F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBBBEDB21E6EBAB002F955F /* Assets.xcassets */; };
 		FFBBBEDF21E6EBAB002F955F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBBBEDD21E6EBAB002F955F /* LaunchScreen.storyboard */; };
 		FFBBBEE221E6EBAB002F955F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEE121E6EBAB002F955F /* main.m */; };
-		FFBBBEF121E6EC72002F955F /* YZUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEEC21E6EC72002F955F /* YZUtils.m */; };
 		FFBBBEF321E6EC72002F955F /* YZUtilsConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */; };
 		FFBBBEF721E6F418002F955F /* YZDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEF621E6F418002F955F /* YZDevice.m */; };
+		FFBBBEFE21E6F5F1002F955F /* UIDevice+YZUIDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEFD21E6F5F1002F955F /* UIDevice+YZUIDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +35,11 @@
 		FFBBBEE121E6EBAB002F955F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FFBBBEEA21E6EC72002F955F /* YZUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUtils.h; sourceTree = "<group>"; };
 		FFBBBEEB21E6EC72002F955F /* YZUtilsConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUtilsConstant.h; sourceTree = "<group>"; };
-		FFBBBEEC21E6EC72002F955F /* YZUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUtils.m; sourceTree = "<group>"; };
 		FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUtilsConstant.m; sourceTree = "<group>"; };
 		FFBBBEF521E6F418002F955F /* YZDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZDevice.h; sourceTree = "<group>"; };
 		FFBBBEF621E6F418002F955F /* YZDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YZDevice.m; sourceTree = "<group>"; };
+		FFBBBEFC21E6F5F1002F955F /* UIDevice+YZUIDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YZUIDevice.h"; sourceTree = "<group>"; };
+		FFBBBEFD21E6F5F1002F955F /* UIDevice+YZUIDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YZUIDevice.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,8 @@
 		FFBBBED121E6EBAB002F955F /* YZUtils */ = {
 			isa = PBXGroup;
 			children = (
+				FFBBBEEA21E6EC72002F955F /* YZUtils.h */,
+				FFBBBEF821E6F5C5002F955F /* Category */,
 				FFBBBEE821E6EC61002F955F /* Utils */,
 				FFBBBED221E6EBAB002F955F /* AppDelegate.h */,
 				FFBBBED321E6EBAB002F955F /* AppDelegate.m */,
@@ -108,14 +111,21 @@
 		FFBBBEE821E6EC61002F955F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FFBBBEEA21E6EC72002F955F /* YZUtils.h */,
-				FFBBBEEC21E6EC72002F955F /* YZUtils.m */,
 				FFBBBEEB21E6EC72002F955F /* YZUtilsConstant.h */,
 				FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */,
 				FFBBBEF521E6F418002F955F /* YZDevice.h */,
 				FFBBBEF621E6F418002F955F /* YZDevice.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		FFBBBEF821E6F5C5002F955F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FFBBBEFC21E6F5F1002F955F /* UIDevice+YZUIDevice.h */,
+				FFBBBEFD21E6F5F1002F955F /* UIDevice+YZUIDevice.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,7 +139,6 @@
 				FFBBBECB21E6EBAB002F955F /* Sources */,
 				FFBBBECC21E6EBAB002F955F /* Frameworks */,
 				FFBBBECD21E6EBAB002F955F /* Resources */,
-				1B97EEBF7E85C1D386B5F102 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,28 +217,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1B97EEBF7E85C1D386B5F102 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YZUtils/Pods-YZUtils-resources.sh",
-				"${PODS_ROOT}/SAMKeychain/Support/SAMKeychain.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YZUtils/Pods-YZUtils-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -238,10 +225,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFBBBEF321E6EC72002F955F /* YZUtilsConstant.m in Sources */,
-				FFBBBEF121E6EC72002F955F /* YZUtils.m in Sources */,
 				FFBBBED721E6EBAB002F955F /* ViewController.m in Sources */,
 				FFBBBEE221E6EBAB002F955F /* main.m in Sources */,
 				FFBBBEF721E6F418002F955F /* YZDevice.m in Sources */,
+				FFBBBEFE21E6F5F1002F955F /* UIDevice+YZUIDevice.m in Sources */,
 				FFBBBED421E6EBAB002F955F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

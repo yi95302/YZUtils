@@ -1,16 +1,18 @@
 PODS:
-  - SAMKeychain (1.5.3)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - SAMKeychain
+  - YYKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - SAMKeychain
+    - YYKit
 
 SPEC CHECKSUMS:
-  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 694f30701150a8ba8cae994e5bb22d5882067fa9
+PODFILE CHECKSUM: 99329bfff2c8a6db0d5aa51fe8091f629183723d
 
 COCOAPODS: 1.5.3
