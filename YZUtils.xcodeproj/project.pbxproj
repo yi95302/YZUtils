@@ -13,6 +13,8 @@
 		FFBBBEDC21E6EBAB002F955F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFBBBEDB21E6EBAB002F955F /* Assets.xcassets */; };
 		FFBBBEDF21E6EBAB002F955F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFBBBEDD21E6EBAB002F955F /* LaunchScreen.storyboard */; };
 		FFBBBEE221E6EBAB002F955F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEE121E6EBAB002F955F /* main.m */; };
+		FFBBBEF121E6EC72002F955F /* YZUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEEC21E6EC72002F955F /* YZUtils.m */; };
+		FFBBBEF321E6EC72002F955F /* YZUtilsConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		FFBBBEDE21E6EBAB002F955F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFBBBEE021E6EBAB002F955F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFBBBEE121E6EBAB002F955F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FFBBBEEA21E6EC72002F955F /* YZUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUtils.h; sourceTree = "<group>"; };
+		FFBBBEEB21E6EC72002F955F /* YZUtilsConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZUtilsConstant.h; sourceTree = "<group>"; };
+		FFBBBEEC21E6EC72002F955F /* YZUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUtils.m; sourceTree = "<group>"; };
+		FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZUtilsConstant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		FFBBBED121E6EBAB002F955F /* YZUtils */ = {
 			isa = PBXGroup;
 			children = (
+				FFBBBEE821E6EC61002F955F /* Utils */,
 				FFBBBED221E6EBAB002F955F /* AppDelegate.h */,
 				FFBBBED321E6EBAB002F955F /* AppDelegate.m */,
 				FFBBBED521E6EBAB002F955F /* ViewController.h */,
@@ -69,6 +76,17 @@
 				FFBBBEE121E6EBAB002F955F /* main.m */,
 			);
 			path = YZUtils;
+			sourceTree = "<group>";
+		};
+		FFBBBEE821E6EC61002F955F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FFBBBEEA21E6EC72002F955F /* YZUtils.h */,
+				FFBBBEEC21E6EC72002F955F /* YZUtils.m */,
+				FFBBBEEB21E6EC72002F955F /* YZUtilsConstant.h */,
+				FFBBBEEE21E6EC72002F955F /* YZUtilsConstant.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBBBEF321E6EC72002F955F /* YZUtilsConstant.m in Sources */,
+				FFBBBEF121E6EC72002F955F /* YZUtils.m in Sources */,
 				FFBBBED721E6EBAB002F955F /* ViewController.m in Sources */,
 				FFBBBEE221E6EBAB002F955F /* main.m in Sources */,
 				FFBBBED421E6EBAB002F955F /* AppDelegate.m in Sources */,
