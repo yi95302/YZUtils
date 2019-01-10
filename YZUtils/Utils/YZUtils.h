@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YZUtilsConstant.h"
-
+#import "YZDevice.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface YZUtils : NSObject
